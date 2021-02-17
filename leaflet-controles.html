@@ -56,13 +56,11 @@
                     "Terrain": terreno
                 };
     
-                controlCapas = L.control.layers(baseMaps, overlayMaps,{collapsed:false}); 
+                controlCapas = L.control.layers(baseMaps, overlayMaps);
                 controlCapas.addTo(map);
     
                 controlEscala = L.control.scale();
                 controlEscala.addTo(map);
-
-
             }
         </script>
     </head>
