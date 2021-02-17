@@ -18,7 +18,7 @@ function addDatosFarmacias() {
         style: function (feature) {
             return {
                 color: "#d607f2",
-                weight: 6
+                weight: 5
             }
         },
         onEachFeature: function (feature, layer) {
