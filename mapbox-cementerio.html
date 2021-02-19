@@ -1,0 +1,50 @@
+<html>
+
+<head>
+    <meta charset='utf-8' />
+    <title>PRÁCTICA CEMENTERIO</title>
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.0.1/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.0.1/mapbox-gl.css' rel='stylesheet' />
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        #map {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 100%;
+            height: 100%
+        }
+    </style>
+    <script>
+        //Añadir vuestor token y vuestro estilo
+        function init() {
+            mapboxgl.accessToken =
+                'pk.eyJ1IjoiZmRlbGxhbm84NiIsImEiOiJja2w5dnRtYnMzYjVxMm9wbGpsZ2xrejhhIn0.Lrjck1Y97khXRX_3bxQj7w';
+            var map = new mapboxgl.Map({
+                container: 'map',
+                style: 'mapbox://styles/fdellano86/cklbm7xr32shw17toy32tkffa',
+                center: [2.837011111, 41.972441667],
+                zoom: 16,
+                attributionControl: false,
+                hash: true
+            });
+
+            map.addControl(new mapboxgl.AttributionControl({ compact: true }));
+            map.addControl(new mapboxgl.NavigationControl());
+
+
+
+        } // init
+    </script>
+</head>
+
+<body onload="init()">
+    <div id="map"></div>
+</body>
+
+</html>
