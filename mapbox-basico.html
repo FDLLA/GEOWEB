@@ -63,8 +63,33 @@
                         "line-width": 3
                     }
                 });
-            });
+
                 
+                map.on('click', 'viasciclables', function (e) {
+
+                    var text = "";
+                    console.info(e.features[0]);
+                    for (key in e.features[0].properties) {
+
+                        text += "<b>" + key + "</b>:" + e.features[0].properties[key] + "<br>";
+                    }
+                    new mapboxgl.Popup()
+                        .setLngLat(e.lngLat)
+                        .setHTML(text)
+                        .addTo(map);
+
+                });
+
+                map.on('mouseenter', 'viasciclables', function () {
+                    map.getCanvas().style.cursor = 'pointer';
+                });
+
+                map.on('mouseleave', 'viasciclables', function () {
+                    map.getCanvas().style.cursor = '';
+                });
+
+
+            });
 
 
 
