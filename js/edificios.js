@@ -2,7 +2,7 @@ function addEdificiosCapa() {
 
     map.addSource("edificios_source", {
         "type": "vector",
-        "url": "mapbox://fdellano86.56r9h61v"  // Nuestor ID Tileset
+        "url": "mapbox://fdellano86.56r9h61v"  // Nuestro ID Tileset
 
     }); //fin map source
 
