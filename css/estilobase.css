@@ -28,3 +28,18 @@ body {
     cursor:pointer;
     width: 95%;
 }
+.panelTitulo{
+position: absolute;
+top: 5px;
+left: 45%;
+z-index:5;
+padding: 10px; 
+background-color: bisque;
+opacity: 0.9; 
+border-radius: 4px;
+font-size: large;
+font-family: 'Times New Roman', Times, serif;
+
+
+
+}

@@ -6,6 +6,8 @@
     <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
     <script src='https://api.mapbox.com/mapbox-gl-js/v2.0.1/mapbox-gl.js'></script>
     <link href='https://api.mapbox.com/mapbox-gl-js/v2.0.1/mapbox-gl.css' rel='stylesheet' />
+    <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.4.2/mapbox-gl-geocoder.min.js"></script>
+    <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.4.2/mapbox-gl-geocoder.css" type="text/css"/>
     <link href='css/estilobase.css' rel='stylesheet' />
 
     <script src='js/edificios.js'></script>
@@ -28,10 +30,24 @@
             map.addControl(new mapboxgl.AttributionControl({ compact: true }));
             map.addControl(new mapboxgl.NavigationControl());
 
+            map.addControl(
+                new MapboxGeocoder({
+                accessToken: mapboxgl.accessToken,
+                mapboxgl: mapboxgl,
+                collapsed:true,
+                bbox: [2.1066 , 41.3000,2.2536 , 41.4468],
+                placeholder: "Buscar...",
+
+
+                
+
+                }));
+
 
             map.on('load', function () {
 
                 addEdificiosCapa();
+                addPopupToMapEdificios("edificios")
 
 
             }); //fin onload
@@ -41,7 +57,9 @@
 </head>
 
 <body onload="init()">
-
+<div class="panelTitulo">
+    MAPA CATASTRO DE BARCELONA
+</div>
     <div class="panelTopIzquierda">
         <label id="altura">Más de 0 pisos</label>
         <input  onChange="filtrarEdificios(this.value)" id="slider" type="range" min="1" max="50" step="1" value="0" />
