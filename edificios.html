@@ -17,7 +17,7 @@
                 'pk.eyJ1IjoiZmRlbGxhbm84NiIsImEiOiJja2w5dnRtYnMzYjVxMm9wbGpsZ2xrejhhIn0.Lrjck1Y97khXRX_3bxQj7w';
             map = new mapboxgl.Map({
                 container: 'map',
-                style: 'mapbox://styles/fdellano86/ckl9wyd721cyb17mj1miuc7ug',
+                style: 'mapbox://styles/mapbox/dark-v10',
                 center: [2.16859, 41.3954],
                 zoom: 15,
                 attributionControl: false,
@@ -41,6 +41,13 @@
 </head>
 
 <body onload="init()">
+
+    <div class="panelTopIzquierda">
+        <label id="altura">Más de 0 pisos</label>
+        <input  onChange="filtrarEdificios(this.value)" id="slider" type="range" min="1" max="50" step="1" value="0" />
+        <hr>
+        <input id="textos" onChange="verTextos(this.checked)" type="checkbox" checked> ver topónimos
+    </div>
 
     <div id="map"></div>
 </body>

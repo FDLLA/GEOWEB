@@ -39,6 +39,7 @@ function addDatosFarmacias() {
             },
             pointToLayer: function (feature, latlng) {
                 puntosCluster.addLayer(L.marker(latlng));
+                console.info(feature);
                 return L.circleMarker(latlng, {
                     radius: 6,
                     fillColor: "#00ff00",
