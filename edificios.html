@@ -11,6 +11,7 @@
     <link href='css/estilobase.css' rel='stylesheet' />
 
     <script src='js/edificios.js'></script>
+    <script src='js/3d.js'></script>
     <script>
         //Añadir vuestor token y/o estilo !!
         var map;
@@ -19,7 +20,7 @@
                 'pk.eyJ1IjoiZmRlbGxhbm84NiIsImEiOiJja2w5dnRtYnMzYjVxMm9wbGpsZ2xrejhhIn0.Lrjck1Y97khXRX_3bxQj7w';
             map = new mapboxgl.Map({
                 container: 'map',
-                style: 'mapbox://styles/mapbox/dark-v10',
+                style: 'mapbox://styles/mapbox/satellite-streets-v10',
                 center: [2.16859, 41.3954],
                 zoom: 15,
                 attributionControl: false,
@@ -47,6 +48,7 @@
             map.on('load', function () {
 
                 addEdificiosCapa();
+                add3D();
                 addPopupToMapEdificios("edificios")
 
 

@@ -45,7 +45,8 @@ function addEdificiosCapa() {
         }
 
     }
-        , "road-label"
+
+            ,"road-label-xlarge"
     );
 
 } //fin funcion

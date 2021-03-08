@@ -24,3 +24,19 @@ function add3D() {
     });
 
 } //fin funcion
+
+function ver3D(valor) {
+
+    if (valor) {
+
+        map.setTerrain({
+            'source': 'mapbox-dem',
+            'exaggeration': 1.5
+        });
+
+    } else {
+        map.setTerrain(null);
+    }
+
+
+}
