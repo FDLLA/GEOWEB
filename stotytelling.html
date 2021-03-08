@@ -8,6 +8,7 @@
     <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v2.0.0/mapbox-gl.css' rel='stylesheet' />
     <script src="https://unpkg.com/intersection-observer@0.5.1/intersection-observer.js"></script>
     <script src="https://unpkg.com/scrollama"></script>
+    <script src='js/rutas.js'></script>
     <style>
         body {
             margin:0;
@@ -48,8 +49,8 @@
             z-index: 5;
         }
         #features {
-            padding-top: 10vh;
-            padding-bottom: 10vh;
+            padding-top: 5vh;
+            padding-bottom: 5vh;
         }
         .hidden {
             visibility: hidden;
@@ -88,9 +89,13 @@
         }
 
         .step div {
-            padding:  25px 50px;
-            line-height: 25px;
+            padding:  10px 10px;
+            line-height: 20px;
             font-size: 13px;
+            border-radius: 10px;
+            box-shadow:4px 6px 5px 0px rgb(0, 0, 3);
+            
+
         }
 
         .step img {
@@ -276,6 +281,8 @@ map.on("load", function() {
         // add the DEM source as a terrain layer with exaggerated height
         map.setTerrain({ 'source': 'mapbox-dem', 'exaggeration': 1.5 });
 
+        addRutas();
+
         // add a sky layer that will show when the map is highly pitched
         map.addLayer({
             'id': 'sky',
@@ -286,7 +293,7 @@ map.on("load", function() {
                 'sky-atmosphere-sun-intensity': 15
             }
 
-            
+
         });
     };
 

@@ -1,7 +1,7 @@
 
 function addRutas() {
 
-    var url = 'datos/rutasfd.geojson';
+    var url = 'datos/rutas.geojson';
     map.addSource('rutas', { type: 'geojson', data: url });
 
     map.addLayer({
