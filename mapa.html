@@ -1,0 +1,180 @@
+<html>
+	<head>
+		<title>IMÁGENES MONTERREY</title>
+		<link href="https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@400;700&display=swap" rel="stylesheet">
+		<style>
+			ul,ol{list-style:none}
+			h1,h2,h3,h4,h5,h6,pre,code{font-size:1em;}
+			ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,body,html,p,blockquote,fieldset{
+			margin:0;padding:0;line-height:1; list-style:none;}
+			a img,:link img,:visited img, fieldset{border:none;}
+			input[type=submit], input[type=reset], input[type=button] { *filter:chroma(color=#000000); }
+
+			body { position:relative; font-family:Arial; font-size:16px; color:#000000; background-color:#3b3b3b; }
+			h1 { font-family: 'Roboto', sans-serif; font-size:26px; margin-bottom:30px; font-weight:normal; line-height: 140%; }
+			h2 { font-family:Verdana; font-size:20px; margin-bottom:20px; line-height: 140%; padding: 10px; }
+			h3 { font-family:Verdana; font-size:18px; margin-bottom:10px; line-height: 140%; }
+			p { margin-bottom:10px; text-align: left; line-height: 140%; }
+			strong { font-size:18px; font-weight:normal; color:#0099ff; }
+			a { color:#000000; }
+			hr { clear:both; height:0; line-height:0; margin:0; padding:0; border:0; filter:alpha(opacity=0); }
+
+			div.header {position:fixed; font-size:90px; color:#ffffff;  left:0; top:0; right:0; height:100px ; text-align: center;  z-index:100;  background-color:#3a3125d5}
+			
+			
+			div.menu { position:fixed; left:0; top:100px; right:0; height:30px; text-align:center; z-index:100; background-color:#000405;box-shadow: 4px 6px 5px 0px rgb(12, 12, 12); }
+				div.menu ul { padding-top:7px; }
+ 					div.menu ul li { display:inline-block; margin-right:20px; }
+					 div.menu ul li a { font-weight: bold; text-decoration:none; color:#ffffff; background-color:transparent; }
+					 div.menu ul li a:hover { color:rgba(2, 255, 158, 0.712); }
+
+			.promo {position:fixed; height: 200px ; right:20px ;bottom:20px ;  border-radius:50% ; -webkit-box-shadow: 4px 6px 5px 0px rgb(163, 163, 163);
+			-moz-box-shadow: 4px 6px 5px 0px rgb(16, 16, 17);
+				box-shadow: 4px 6px 5px 0px rgb(0, 0, 3);} 
+
+			.wrapper { position:relative; width:910px; padding:20px; margin:auto; margin-top:130px; margin-bottom:0px; background-color:#616666; border-top:none; }
+
+			
+			
+			.more-info { color:#ff9900; font-size: 18px; }
+			.product-detail { font-size:20px; width:500px; padding:20px 20px 20px 20px; margin:auto; margin-bottom:20px; border:solid 10px #ffffff; color:#ffffff; background-color:rgb(17, 4, 29); -webkit-box-shadow: 4px 6px 5px 0px rgb(17, 14, 14);
+-moz-box-shadow: 4px 6px 5px 0px rgb(16, 16, 17);
+box-shadow: 4px 6px 5px 0px rgb(0, 0, 3); }
+			.product-image { width:150px; height:150px; border-radius:50%; }
+
+			.product-item {  position:relative; padding:10px 10px 10px 225px; margin-bottom:20px; margin-left: 10px; ; float:left;  width:200px; height:135px; border:solid 4px #665d09; background-color: #969696;  }
+				.product-item:hover { background-color:rgba(138, 97, 10, 0.452); }
+			.product-item-img-container { position: relative;; top:10px; left:10px; bottom:10px }
+			.product-item-img { width:500px; position:sticky ;margin-bottom: 20px; }
+			.product-item-text { bottom:20px; margin-top:40px }
+
+			.product-main-image { float:right; margin-left:20px; }
+			div.iw-wrapper { width:200px; background-color: rgba(0, 0, 0, 0.411);}
+				div.wrapper img {width:200px}
+				div.wrapper h2 {color:rgb(39, 39, 46)}
+				div.wrapper p {color:#660808}
+
+				
+			.promo {position:fixed; height: 90px ; right:20px ;bottom:20px ;  border-radius:50% ; -webkit-box-shadow: 4px 6px 5px 0px rgb(17, 14, 14);
+			-moz-box-shadow: 4px 6px 5px 0px rgb(16, 16, 17);
+				box-shadow: 4px 6px 5px 0px rgb(0, 0, 3);} 
+
+
+			#map-canvas { height:500px; margin-bottom:20px; margin:auto }
+		</style>
+		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDEB1plSzdQgv2oSvyvPT99BHmhJpG8Cys&v=3.exp"></script>
+		<script type="text/javascript">
+			var map;
+
+			function creamapa() {
+				var mapOptions = {
+					zoom: 13,
+					minZoom: 8,
+					maxZoom: 16,
+					fullscreenControl: false,
+					backgroundColor: "#000000",
+					center: new google.maps.LatLng(25.657819, -100.278770)
+
+
+				};
+				map = new google.maps.Map(document.getElementById('map-canvas'),
+					mapOptions);
+
+	
+
+
+
+				var product2 = { lat: 25.671057,  lng: -100.298701, name: 'LÍNEA 3 DEL METRO', img: 'images/mty/metro.jpeg', desc:"Ampliación de línea 3 del metro." };
+				var product3 = { lat: 25.631540,  lng: -100.235740, name: 'CERRO DE LA SILLA', img: 'images/mty/silla.jpeg', desc: "Monumento natural del Cerro de la Silla." };
+				var product4 = { lat: 25.653406,  lng: -100.289756, name: 'DISTRITO TEC', img: 'images/mty/dtec.jpeg', desc: "Proyecto de regeneración urbana Distrito Tec, impulsado por el Tecnológico de Monterrey desde 2013." };
+				var product5 = { lat: 25.666754, lng:  -100.306557, name: 'CALLEJÓN DEL ARTE', img: 'images/mty/callejona.jpeg', desc: "Mercado ambulante dominical que se instala en la zona antigua de Monterrey desde 2009." };
+				var product6 = { lat: 25.666304,  lng: -100.310174, name: 'FARO DEL COMERCIO', img: 'images/mty/faro.jpeg', desc: "Monumento a la industria de Monterrey, diseñado por el Arq. Luis Barragán y construido en 1983." };
+				var product7 = { lat: 25.679540,  lng: -100.280978, name: 'PARQUE FUNDIDORA', img: 'images/mty/fundi2.jpeg', desc: "Parque rescatado de una antigua industria de Monterrey desde 1990." };
+				var product8 = { lat: 25.664327,  lng: -100.309992, name: 'MUSEO MARCO', img: 'images/mty/marco.jpeg', desc: "Museo de Arte Contemporáneo, diseñado por Ricardo Legorreta en 1990." };
+				var product9 = { lat: 25.669093, lng: -100.315495, name: 'AV. JUÁREZ', img: 'images/mty/juarez.jpeg', desc: "Proyecto de ampliación de banquetas, desarrollado desde 2014 con banquetas móviles hasta 2018 en su ejecución." };
+				var product10 = { lat: 25.666545, lng: -100.308069, name: 'CALLE PEATONAL MORELOS EN BARRIO ANTIGUO', img: 'images/mty/morelosba.jpeg', desc: "Calle regenerada en la zona antigua de la ciudad, para convertirla en semi-peatonal. Proyecto iniciado en 2012." };
+				var product11 = { lat: 25.657719,  lng: -100.314189, name: 'MATACHINES EN LA BASÍLICA DE GUADALUPE', img: 'images/mty/matachines.jpeg', desc: "Imagen de las fiestas guadalupana con los tradicionales matachines en la basílica de Guadalupe." };
+				var product12 = { lat: 25.676317,  lng: -100.283007, name: 'HORNO 3 EN PARQUE FUNDIDORA', img: 'images/mty/horno3.jpg', desc: "Dentro del parque fundidora se regeneró uno de los antiguos hornos para hacerlo un edificio multicultural." };
+				var product13 = { lat: 25.672334,  lng: -100.301322, name: 'PASEO SANTA LUCÍA', img: 'images/mty/slucia.jpg', desc: "Paseo Santa Lucía, parque lineal con un canal artificial a lo largo de 2.5 km, inaugurado en 2007." };
+
+
+
+				createMarker(product2);
+				createMarker(product3);
+				createMarker(product4);
+				createMarker(product5);
+				createMarker(product6);
+				createMarker(product7);
+				createMarker(product8);
+				createMarker(product9);
+				createMarker(product10);
+				createMarker(product11);
+				createMarker(product12);
+				createMarker(product13);
+
+			}
+
+			function createMarker(prod) {
+				var point = new google.maps.LatLng(prod.lat, prod.lng);
+				var pOptions = {
+					position: point,
+					map: map,
+					title: prod.name,
+					href: prod.href,
+				};
+				var marker = new google.maps.Marker(pOptions);
+				var infoWindowOpt = {
+					content: '<div class="iw-wrapper">'
+						+ '<h2>' + prod.name + '</h2>'
+						+ '<p>'
+						+ '<img src="' + prod.img + '"/>'
+						+ '</p>'
+						+ '<p>'
+						+ prod.desc +
+						'</p>'
+						+ '<p>'
+
+				};
+				var infoW = new google.maps.InfoWindow(infoWindowOpt);
+
+				google.maps.event.addListener(marker, 'click', function (event) {
+					infoW.open(map, marker);
+				})
+
+
+			}
+			google.maps.event.addDomListener(window, 'load', creamapa);
+
+		</script>
+		</head>
+		
+		<body>
+		
+			<div class="header">
+				<p1> MONTERREY, NUEVO LEÓN </p1>
+			</div>
+		<div class="menu">
+				<ul>
+					<li><a href="https://drive.google.com/file/d/1pTRPezXBmQhZAiK7i5ofMajkJgBu6aW6/view?usp=sharing">PRESENTACIÓN MTY</a></li>
+					<li><a href="https://drive.google.com/file/d/1SGKeTS7717icSR5Y9MWJxBLllEXJJJHO/view?usp=sharing">ENCUESTA CIMES</a></li>
+					<li><a href="https://drive.google.com/file/d/1qGw6V2xNhxB841df3GiNDbf30D3oJjTf/view?usp=sharing">PROPUESTA TEMÁTICA</a></li>
+				</ul>
+			</div>
+			<div class="wrapper">
+				<h1>EMBLEMAS DE MONTERREY</h1>
+				<div id="map-canvas"></div>
+			</div>
+
+
+			<div class="promo">
+				<p>
+					<a href="https://mdut.duot.upc.edu/gonzalez-aldo/%20Saludos%20y%20hasta%20pronto"><img img class="PROMO" src="images/mty/master.png" title="MDUT!"
+							class="product-item-text" /></a>
+		
+				</p>
+		
+			</div>
+		
+		</body>
+		
+		</html>
